@@ -58,7 +58,8 @@ export function OrderForm() {
           Pedido recebido com cuidado.
         </h3>
         <p className="mt-3 text-coffee/70">
-          Vamos avaliar e voltar com um orçamento em até 24 horas, em horário comercial.
+          Vamos avaliar e voltar pelo WhatsApp em até 24 horas com um orçamento e
+          combinar a retirada na loja.
         </p>
       </motion.div>
     );
@@ -102,7 +103,7 @@ export function OrderForm() {
             ))}
           </select>
         </Field>
-        <Field label="Data" error={errors.date?.message}>
+        <Field label="Data da retirada" error={errors.date?.message}>
           <input type="date" {...register("date")} className={inputCls(!!errors.date)} />
         </Field>
         <Field label="Pessoas (aprox.)">

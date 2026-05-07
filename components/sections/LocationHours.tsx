@@ -138,7 +138,7 @@ export function LocationHours() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Faça seu pedido
+                    Falar com a casa
                   </a>
                 </div>
               </div>
@@ -159,11 +159,11 @@ export function LocationHours() {
             </div>
 
             <div className="mt-10 flex flex-wrap gap-3">
-              <Button href={whatsappLink()} variant="primary" size="lg">
-                Pedir pelo WhatsApp
+              <Button href={site.address.mapsUrl} variant="primary" size="lg">
+                Traçar rota
               </Button>
-              <Button href={site.address.mapsUrl} variant="ghost" size="lg" magnetic={false}>
-                Como chegar
+              <Button href={whatsappLink()} variant="ghost" size="lg" magnetic={false}>
+                Falar pelo WhatsApp
               </Button>
             </div>
           </div>

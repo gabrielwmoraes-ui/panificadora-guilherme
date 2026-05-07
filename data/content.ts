@@ -259,24 +259,24 @@ export const testimonials: Testimonial[] = [
 
 export const faq: FaqItem[] = [
   {
-    q: "Vocês fazem entregas?",
-    a: "Sim! Entregamos em um raio de 5 km via aplicativo próprio e iFood. Pedidos pelo WhatsApp são confirmados em até 30 minutos.",
+    q: "Posso reservar mesa?",
+    a: "Atendemos por ordem de chegada, mas para grupos acima de 6 pessoas pedimos um aviso prévio pelo WhatsApp para te receber bem.",
   },
   {
     q: "Aceitam encomendas para festas e eventos?",
-    a: "Aceitamos com 48h de antecedência. Bolos personalizados, kits de café da manhã, mesas de doces e coffee breaks corporativos. Solicite um orçamento na página de Encomendas.",
+    a: "Aceitamos com 48h de antecedência. Bolos personalizados, kits de café da manhã, mesas de doces e coffee breaks corporativos. Solicite um orçamento na página de Encomendas — a retirada é sempre na loja, com horário combinado.",
   },
   {
     q: "Têm opções sem glúten ou veganas?",
-    a: "Sim, mantemos uma seleção fixa de itens veganos e sem glúten todos os dias. Confira o cardápio com os filtros ativos.",
-  },
-  {
-    q: "Posso reservar mesa?",
-    a: "Atendemos por ordem de chegada, mas para grupos acima de 6 pessoas pedimos um aviso prévio pelo WhatsApp.",
+    a: "Sim, mantemos uma seleção fixa de itens veganos e sem glúten todos os dias. Os itens com restrição alimentar estão marcados no cardápio do site, mas a vitrine real é maior do que essa seleção.",
   },
   {
     q: "Servem almoço?",
-    a: "Servimos prato executivo de segunda a sexta, das 11h30 às 14h30. Cardápio rotativo semanal com opções vegetarianas.",
+    a: "Servimos prato executivo de segunda a sexta, das 11h30 às 14h30. Cardápio rotativo semanal com opções vegetarianas. Vale a pena passar.",
+  },
+  {
+    q: "Posso conhecer a casa antes de encomendar algo?",
+    a: "Adoramos quando isso acontece. Passe no balcão, prove um café, conheça os produtos e a equipe. A maior parte das nossas encomendas começa numa visita.",
   },
   {
     q: "Os ingredientes são orgânicos?",

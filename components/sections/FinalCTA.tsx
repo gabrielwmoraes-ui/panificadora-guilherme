@@ -42,16 +42,16 @@ export function FinalCTA() {
             A casa fica melhor quando você chega.
           </p>
           <div className="mt-12 flex flex-wrap justify-center gap-4">
-            <Button href={whatsappLink()} variant="dark" size="lg">
-              Pedir agora
+            <Button href="/contato" variant="dark" size="lg">
+              Como chegar
             </Button>
             <Button
-              href="/contato"
+              href={whatsappLink()}
               variant="ghost"
               size="lg"
               className="border-cream/30 text-cream hover:bg-cream/10"
             >
-              Como chegar
+              Tirar uma dúvida
             </Button>
           </div>
         </div>
