@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Meu Coffe — Site institucional
 
-## Getting Started
+Site institucional para a panificadora **Meu Coffe**: Next.js 16 + TypeScript +
+Tailwind v4 + Framer Motion + Lenis. Foco em estética calorosa, animações
+cinematográficas, SEO local e conversão (WhatsApp, ligações, visitas).
 
-First, run the development server:
+## Rodar localmente
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre em [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Outros scripts:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Script | O que faz |
+|---|---|
+| `npm run dev` | Dev server com Turbopack |
+| `npm run build` | Build de produção |
+| `npm run start` | Roda o build de produção |
+| `npm run lint` | ESLint |
 
-## Learn More
+## Estrutura
 
-To learn more about Next.js, take a look at the following resources:
+```
+app/                     Rotas (App Router)
+  layout.tsx             Layout raiz, fontes, providers, SEO base
+  page.tsx               Home — 9 seções
+  cardapio/              Cardápio com tabs e filtros de dieta
+  sobre/                 História + timeline + equipe
+  contato/               Tiles, formulário, FAQ, mapa
+  encomendas/            Tipos, formulário, galeria
+  opengraph-image.tsx    OG image gerada dinamicamente (1200x630)
+  sitemap.ts             Sitemap automático
+  robots.ts              robots.txt
+  not-found.tsx          404 customizada
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+components/
+  layout/                Header, Footer, WhatsApp FAB, Newsletter, Cookies
+  sections/              Blocos reutilizáveis (Hero, AboutSplit, Timeline...)
+  ui/                    Primitivos (Button, Container, SectionLabel)
+  animations/            SmoothScroll (Lenis), MaskReveal, Parallax,
+                         Counter, Loader, CustomCursor, Marquee, PageTransition
+  seo/                   JSON-LD LocalBusiness/Bakery/Restaurant
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+data/content.ts          Todo o conteúdo mockado (produtos, depoimentos,
+                         FAQ, equipe, timeline, galeria)
 
-## Deploy on Vercel
+lib/
+  site.ts                Identidade, endereço, horários, contatos, WhatsApp link
+  cn.ts                  clsx + tailwind-merge
+  format.ts              Formatação BRL
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Onde editar conteúdo
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Produtos, cardápio, depoimentos, FAQ, equipe, timeline, galeria:** `data/content.ts`
+- **Endereço, telefone, WhatsApp, horários, redes sociais, URL:** `lib/site.ts`
+- **Imagens próprias:** substitua os links em `data/content.ts` por caminhos como
+  `/images/seu-arquivo.jpg` e coloque os arquivos em `public/images/`. As imagens
+  remotas autorizadas estão em `next.config.ts` (`images.remotePatterns`).
+- **Paleta e tipografia:** `app/globals.css` (bloco `@theme`).
+
+## Stack
+
+- **Next.js 16** com App Router, RSC, Turbopack, `next/image`, `next/font`
+- **TypeScript** estrito
+- **Tailwind v4** com tokens via `@theme`
+- **Framer Motion** para UI / scroll-driven
+- **GSAP** disponível (importável onde quiser usar `ScrollTrigger`)
+- **Lenis** smooth scroll
+- **Lucide React** + ícones SVG inline para marcas
+- **react-hook-form + zod** para formulários
+
+## Acessibilidade
+
+- Hierarquia semântica (um `<h1>` por página)
+- Foco visível dourado em qualquer elemento focável
+- `prefers-reduced-motion: reduce` desabilita animações pesadas
+- Cursor customizado só em pointer fino + hover
+- Contraste WCAG AA no tema cream/coffee/caramel
+- `alt` descritivo em todas as imagens
+
+## SEO
+
+- Metadata API por rota (title, description, canonical, OpenGraph, Twitter)
+- JSON-LD `Bakery` + `CafeOrCoffeeShop` + `Restaurant` em todas as páginas
+- `sitemap.xml` e `robots.txt` automáticos
+- OG image gerada dinamicamente via `app/opengraph-image.tsx`
+- URLs em português (`/cardapio`, `/sobre`, `/encomendas`, `/contato`)
+
+## Próximos passos sugeridos
+
+- Substituir imagens do Unsplash pelas reais em `public/images/`
+- Conectar o formulário de contato/encomendas a um backend (Resend, Brevo, API própria)
+- Conectar o newsletter a uma plataforma (Mailchimp, Beehiiv)
+- Validar Schema.org em [validator.schema.org](https://validator.schema.org)
+- Rodar Lighthouse para checar Core Web Vitals e ajustar ainda mais
