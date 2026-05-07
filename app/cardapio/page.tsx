@@ -6,7 +6,7 @@ import { BrandMarquee } from "@/components/sections/BrandMarquee";
 export const metadata: Metadata = {
   title: "Cardápio",
   description:
-    "Cardápio completo da Meu Coffe: pães de fermentação natural, doces, salgados, cafés especiais, bebidas e almoço executivo. Opções veganas e sem glúten.",
+    "Cardápio completo da Meu Café: pães de fermentação natural, doces, salgados, cafés especiais, bebidas e almoço executivo. Opções veganas e sem glúten.",
   alternates: { canonical: "/cardapio" },
 };
 

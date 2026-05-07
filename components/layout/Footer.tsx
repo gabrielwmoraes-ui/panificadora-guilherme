@@ -33,7 +33,7 @@ export function Footer() {
         <div className="grid gap-12 py-20 md:grid-cols-12 md:gap-10 md:py-28">
           <div className="md:col-span-4">
             <p className="font-display text-4xl tracking-tight">
-              Meu <span className="italic text-gold">Coffe</span>
+              Meu <span className="italic text-gold">Café</span>
             </p>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-cream/70">
               {site.description}
@@ -118,7 +118,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col items-start justify-between gap-4 border-t border-cream/10 py-8 text-xs text-cream/50 md:flex-row md:items-center">
-          <p>© {year} Meu Coffe. Feito com fermento e carinho.</p>
+          <p>© {year} Meu Café. Feito com fermento e carinho.</p>
           <p>
             Padaria · Café especial · {site.address.city} — {site.address.state}
           </p>

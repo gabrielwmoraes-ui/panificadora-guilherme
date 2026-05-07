@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Encomendas",
   description:
-    "Encomendas de bolos personalizados, kits de café da manhã, mesas de doces e coffee breaks corporativos. Solicite um orçamento e retire na Meu Coffe.",
+    "Encomendas de bolos personalizados, kits de café da manhã, mesas de doces e coffee breaks corporativos. Solicite um orçamento e retire na Meu Café.",
   alternates: { canonical: "/encomendas" },
 };
 
@@ -88,7 +88,7 @@ export default function EncomendasPage() {
                 Onde você retira
               </p>
               <p className="mt-4 font-display text-2xl leading-tight tracking-tight text-coffee">
-                Meu <span className="italic text-caramel">Coffe</span>
+                Meu <span className="italic text-caramel">Café</span>
               </p>
 
               <div className="mt-6 space-y-4 text-sm">

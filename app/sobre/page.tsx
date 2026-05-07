@@ -8,7 +8,7 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 export const metadata: Metadata = {
   title: "Sobre nós",
   description:
-    "Conheça a história da Meu Coffe, a equipe por trás do balcão, nossa filosofia de fermentação natural e os 15 anos no bairro. Padaria artesanal feita com cuidado.",
+    "Conheça a história da Meu Café, a equipe por trás do balcão, nossa filosofia de fermentação natural e os 15 anos no bairro. Padaria artesanal feita com cuidado.",
   alternates: { canonical: "/sobre" },
 };
 

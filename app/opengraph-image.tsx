@@ -30,7 +30,7 @@ export default async function OG() {
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ display: "flex", gap: 24, fontSize: 130, lineHeight: 1, letterSpacing: -3 }}>
             <span>Meu</span>
-            <span style={{ color: "#C8A35A", fontStyle: "italic" }}>Coffe</span>
+            <span style={{ color: "#C8A35A", fontStyle: "italic" }}>Café</span>
           </div>
           <div
             style={{

@@ -1,6 +1,6 @@
-# Meu Coffe — Site institucional
+# Meu Café — Site institucional
 
-Site institucional para a panificadora **Meu Coffe**: Next.js 16 + TypeScript +
+Site institucional para a panificadora **Meu Café**: Next.js 16 + TypeScript +
 Tailwind v4 + Framer Motion + Lenis. Foco em estética calorosa, animações
 cinematográficas, SEO local e conversão (WhatsApp, ligações, visitas).
 

@@ -33,7 +33,7 @@ export function Loader() {
         className="text-center"
       >
         <p className="font-display text-3xl tracking-tight md:text-5xl">
-          Meu <span className="italic text-gold">Coffe</span>
+          Meu <span className="italic text-gold">Café</span>
         </p>
         <p className="mt-3 text-xs uppercase tracking-[0.3em] text-cream/60">
           Padaria · Café

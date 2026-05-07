@@ -1,5 +1,5 @@
 export const site = {
-  name: "Meu Coffe",
+  name: "Meu Café",
   tagline: "Padaria artesanal · Café especial",
   foundedYear: 2010,
   url: "https://meucoffe.com.br",
@@ -7,7 +7,7 @@ export const site = {
     "Padaria artesanal com fermentação natural, café especial e atendimento caloroso no coração do bairro. Pães frescos todos os dias, doces de receita autoral e cafés selecionados.",
   whatsapp: "5511999999999",
   whatsappMessage:
-    "Olá! Vim pelo site da Meu Coffe e gostaria de tirar uma dúvida.",
+    "Olá! Vim pelo site da Meu Café e gostaria de tirar uma dúvida.",
   phone: "(11) 99999-9999",
   phoneTel: "+5511999999999",
   email: "ola@meucoffe.com.br",

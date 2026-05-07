@@ -52,7 +52,7 @@ export function Header() {
               "font-display text-2xl tracking-tight transition-colors duration-500 md:text-3xl",
               onLight ? "text-coffee" : "text-cream",
             )}
-            aria-label="Meu Coffe — início"
+            aria-label="Meu Café — início"
           >
             Meu{" "}
             <span
@@ -61,7 +61,7 @@ export function Header() {
                 onLight ? "text-caramel" : "text-gold",
               )}
             >
-              Coffe
+              Café
             </span>
           </Link>
 

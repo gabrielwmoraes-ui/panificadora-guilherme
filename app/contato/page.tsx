@@ -11,7 +11,7 @@ import { site, whatsappLink } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contato",
   description:
-    "Fale com a Meu Coffe: WhatsApp, telefone, email e formulário. Tire dúvidas, faça encomendas, marque eventos. Padaria artesanal e cafeteria.",
+    "Fale com a Meu Café: WhatsApp, telefone, email e formulário. Tire dúvidas, faça encomendas, marque eventos. Padaria artesanal e cafeteria.",
   alternates: { canonical: "/contato" },
 };
 

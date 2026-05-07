@@ -55,7 +55,7 @@ export function LocationHours() {
             >
               <iframe
                 src={site.address.embedUrl}
-                title="Mapa da localização da Meu Coffe"
+                title="Mapa da localização da Meu Café"
                 className="absolute inset-0 h-full w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
