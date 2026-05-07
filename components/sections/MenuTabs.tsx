@@ -4,9 +4,12 @@ import { useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
-import { allMenuItems, categories, type Category, type Diet } from "@/data/content";
-import { formatBRL } from "@/lib/format";
+import { products, categories, type Category, type Diet } from "@/data/content";
 import { cn } from "@/lib/cn";
+
+const visibleCategories = categories.filter((c) =>
+  products.some((p) => p.category === c.id),
+);
 
 const dietLabels: Record<Diet, string> = {
   vegano: "Vegano",
@@ -17,10 +20,10 @@ const dietLabels: Record<Diet, string> = {
 
 export function MenuTabs() {
   const reduce = useReducedMotion();
-  const [active, setActive] = useState<Category>("paes");
+  const [active, setActive] = useState<Category>(visibleCategories[0]?.id ?? "paes");
   const [diet, setDiet] = useState<Diet | "all">("all");
 
-  const items = allMenuItems
+  const items = products
     .filter((p) => p.category === active)
     .filter((p) => diet === "all" || p.diet?.includes(diet));
 
@@ -29,7 +32,7 @@ export function MenuTabs() {
       <Container>
         <div className="flex flex-col gap-6 border-b border-coffee/10 pb-6 md:flex-row md:items-center md:justify-between">
           <div className="flex flex-wrap gap-2">
-            {categories.map((c) => {
+            {visibleCategories.map((c) => {
               const isActive = c.id === active;
               return (
                 <button
@@ -120,18 +123,13 @@ export function MenuTabs() {
                       </span>
                     ))}
                   </div>
-                  <div className="mt-5 flex items-start justify-between gap-4">
-                    <div>
-                      <h3 className="font-display text-xl tracking-tight">
-                        {item.name}
-                      </h3>
-                      <p className="mt-1.5 text-sm leading-relaxed text-coffee/65">
-                        {item.description}
-                      </p>
-                    </div>
-                    <span className="shrink-0 font-display italic text-caramel-deep">
-                      {formatBRL(item.price)}
-                    </span>
+                  <div className="mt-5">
+                    <h3 className="font-display text-xl tracking-tight">
+                      {item.name}
+                    </h3>
+                    <p className="mt-1.5 text-sm leading-relaxed text-coffee/65">
+                      {item.description}
+                    </p>
                   </div>
                 </motion.article>
               ))}

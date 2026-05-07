@@ -15,9 +15,9 @@ export default function CardapioPage() {
     <>
       <PageHeader
         eyebrow="Cardápio"
-        title="O que está"
-        italic="saindo do forno."
-        description="Tudo o que servimos hoje, organizado por categoria. As fornadas começam às 6h e se renovam ao longo do dia. Itens com restrição alimentar marcados."
+        title="Os que mais"
+        italic="saem da casa."
+        description="Uma seleção dos preferidos do balcão, organizados por categoria. Para preços, disponibilidade do dia e encomendas, fala com a gente pelo WhatsApp."
       />
       <MenuTabs />
       <BrandMarquee />

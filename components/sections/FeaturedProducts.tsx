@@ -9,7 +9,6 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 import { Button } from "@/components/ui/Button";
 import { MaskReveal } from "@/components/animations/MaskReveal";
 import { products } from "@/data/content";
-import { formatBRL } from "@/lib/format";
 
 export function FeaturedProducts() {
   const reduce = useReducedMotion();
@@ -76,16 +75,11 @@ export function FeaturedProducts() {
                 </div>
               </Link>
 
-              <div className="mt-6 flex items-start justify-between gap-6">
-                <div>
-                  <h3 className="font-display text-2xl tracking-tight">{p.name}</h3>
-                  <p className="mt-2 max-w-sm text-sm leading-relaxed text-coffee/65">
-                    {p.description}
-                  </p>
-                </div>
-                <span className="shrink-0 font-display text-lg italic text-caramel-deep">
-                  {formatBRL(p.price)}
-                </span>
+              <div className="mt-6">
+                <h3 className="font-display text-2xl tracking-tight">{p.name}</h3>
+                <p className="mt-2 max-w-sm text-sm leading-relaxed text-coffee/65">
+                  {p.description}
+                </p>
               </div>
             </motion.article>
           ))}
@@ -93,7 +87,7 @@ export function FeaturedProducts() {
 
         <div className="mt-20 flex justify-center">
           <Button href="/cardapio" variant="primary" size="lg">
-            Ver cardápio completo <ArrowUpRight size={18} />
+            Ver cardápio <ArrowUpRight size={18} />
           </Button>
         </div>
       </Container>
